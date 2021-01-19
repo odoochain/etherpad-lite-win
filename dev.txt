@@ -61,4 +61,12 @@ windows 安装
 
 这是因为etherpad服务器的网址最后不要加“/"
 
+## fix Integrate etherpad-lite on different domains
+
+https://github.com/ether/etherpad-lite/issues/2526
+
+https://github.com/ether/etherpad-lite/issues/3695
+
+## npm install ep_adminpads2 ep_headings2 ep_markdown ep_auth_session
+
 
