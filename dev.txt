@@ -1,0 +1,64 @@
+
+https://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/
+
+https://www.xiexianbin.cn/software/etherpad/2018-04-16-etherpad/index.html
+
+https://github.com/ether/etherpad-lite/wiki/How-to-use-Etherpad-Lite-with-MySQL
+
+
+
+Install git
+Install node.js
+Install python
+add PYTHON as an env
+Install postgres
+add C:\Program Files\PostgreSQL\9.2\bin to your path
+Download etherpad-lite with git
+Run the etherpad-lite windows installer per the instructions
+start etherpad-lite
+make sure it works with the dirty DB before getting exotic
+Set up postgres
+npm install pg (will throw an error about msbuild version, but ignore that, the native JS drivers are installed)
+add a user using pgadmin
+add a DB using pgadmin and the user created a second ago
+reconfigure to use postgres in the settings.json file
+Run start.bat to make sure it works
+Turn down the log messages to only ERROR in the settings.json file.
+
+  "dbType" : "postgres",
+  "dbSettings" : {
+    "user":     "odoo",
+    "host":     "localhost",
+    "port":     5432,
+    "password": "odoo",
+    "database": "odoo14",
+    "charset":  "utf8mb4"
+  },
+  
+  DROP TABLE IF EXISTS "public"."store";
+CREATE TABLE "public"."store" (
+"value" text COLLATE "default",
+"key" varchar COLLATE "default",
+"create_uid" int4,
+"create_date" timestamp(6),
+"write_uid" int4,
+"write_date" timestamp(6)
+)
+WITH (OIDS=FALSE)
+
+;
+
+--------------------------------------
+
+plugin: ep_page_view, function name: F:\A_A_odoo\AAA\A_ether\etherpad-lite\node_modules\ep_page_view\page_view:eejsBlock_styles, hook: eejsBlock_styles): The hook function neither called the callback nor returned a non-undefined value. This is prohibited because it will result in freezes when a future version of Etherpad updates the hook to support asynchronous behavior
+
+ 增加cb()即可
+
+ ## bin\installOnWindows.bat
+windows 安装
+
+## fix Http Error: the credentials might be absent for url
+
+这是因为etherpad服务器的网址最后不要加“/"
+
+
