@@ -3,12 +3,14 @@
     "ep_adminpads2": "^2.1.25",
     "ep_align": "^0.3.16",
     "ep_comments_page": "^0.1.47",
+    "ep_copy_paste_images": "0.0.27",
     "ep_embedded_hyperlinks2": "^1.2.2",
     "ep_etherpad-lite": "file:src",
     "ep_font_color": "0.0.35",
     "ep_headings2": "^0.2.13",
     "ep_markdown": "^0.1.21",
-    "ep_page_view": "^0.5.26"
+    "ep_set_title_on_pad": "^0.5.1",
+    "ep_what_have_i_missed": "0.0.10"
   },
   "devDependencies": {
     "eslint": "^7.15.0",
