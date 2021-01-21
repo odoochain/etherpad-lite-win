@@ -2,7 +2,6 @@
   "dependencies": {
     "ep_adminpads2": "^2.1.25",
     "ep_align": "^0.3.16",
-    "ep_comments_page": "^0.1.47",
     "ep_copy_paste_images": "0.0.27",
     "ep_embedded_hyperlinks2": "^1.2.2",
     "ep_etherpad-lite": "file:src",
